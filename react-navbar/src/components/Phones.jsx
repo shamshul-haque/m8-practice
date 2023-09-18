@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Circles } from "react-loader-spinner";
 import { Bar, BarChart, Tooltip, XAxis, YAxis } from "recharts";
 
 const Phones = () => {
   const [phones, setPhones] = useState([]);
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     // fetch way to load
@@ -25,10 +27,22 @@ const Phones = () => {
         });
         setPhones(fakeData);
         console.log(fakeData);
+        setLoad(false);
       });
   }, []);
   return (
     <div>
+      {load && (
+        <Circles
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="circles-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      )}
       <h1>Phones: {phones.length}</h1>
       <BarChart width={1250} height={400} data={phones}>
         <XAxis dataKey="name" />
