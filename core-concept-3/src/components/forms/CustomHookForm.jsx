@@ -1,4 +1,4 @@
-import useInputState from "../hooks/useInputState";
+import useInputState from "../customHooks/useInputState";
 
 const CustomHookForm = () => {
   //   const [name, handleNameChange] = useInputState("sojoni");

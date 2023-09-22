@@ -1,6 +1,6 @@
 import "./App.css";
-import CustomHookForm from "./components/customHook/CustomHookForm";
 import ControlledForm from "./components/forms/ControlledForm";
+import CustomHookForm from "./components/forms/CustomHookForm";
 import Forms from "./components/forms/Forms";
 import RefForm from "./components/forms/RefForm";
 
