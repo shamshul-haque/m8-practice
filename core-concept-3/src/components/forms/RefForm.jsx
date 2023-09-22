@@ -1,4 +1,4 @@
-/* import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const RefForm = () => {
   const handleSubmit = (e) => {
@@ -31,4 +31,3 @@ const RefForm = () => {
 };
 
 export default RefForm;
- */
